@@ -14,6 +14,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <style> @media screen and (max-width: 768px) {
+    #sidebar { 
+   display: none;
+    }
+   }
+   @media screen and (max-width: 768px) {
+    #sidebarlinks { 
+   display: none;
+    }
+   }
+   @media screen and (min-width: 768px) {
+    #sidebarphone { 
+   display: none;
+    }
+   }</style>
 </head>
 <body>
 
@@ -42,7 +57,23 @@
 		</div>
 	  </div>
 	</nav>
-  
+  <!-- Contact Info on the Sidebar -->
+            
+  <div id= "sidebarphone" class="col-md-4">
+    <img class="img-responsive" src="photo2.jpg" style = "float:left;max-width:40%;max-height:30%" alt=""><br>
+    <div style="font-family: 'Oswald', sans-serif; font-size: 32px;float:right"><b>&nbspFlavio Pisciotta</b></div>
+    <p><b>&nbsp&nbsp&nbspPhD candidate in Linguistics</b><br>
+    &nbsp&nbsp&nbsp<a href= "fpisciotta@unisa.it">fpisciotta@unisa.it</a><br>
+    &nbsp&nbsp&nbspUniversity of Salerno<br>
+    &nbsp&nbsp&nbspFisciano (SA), Italy<br>
+    &nbsp&nbsp&nbsp<a href="https://www.dipsumdills.it/en/teacher/flavio-pisciotta/">Personal page</a><br>
+    &nbsp&nbsp&nbsp<a href="https://www.linkedin.com/in/flavio-pisciotta-a698071b5/">LinkedIn</a><br>
+    &nbsp&nbsp&nbsp<a href="https://github.com/fla-pi/">GitHub</a><br>
+    </p>
+    
+    
+</div>
+
   <!-- Page Content -->
     <div class="container">
 
@@ -64,7 +95,7 @@
             </div> 
 
             <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
+            <div id= "sidebar" class="col-md-4">
                 <img class="img-responsive" src="photo2.jpg" alt=""><br>
                 <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Flavio Pisciotta</b></div>
                 <p><b>PhD candidate in Linguistics</b><br>
@@ -78,7 +109,7 @@
             
             
             <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:1%">
+            <div id= "sidebarlinks" class="col-md-4" style="margin-top:1%">
               <dd><a href="https://www.dipsumdills.it/en/teacher/flavio-pisciotta/">Personal page</a></dd>
               <dd><a href="https://www.linkedin.com/in/flavio-pisciotta-a698071b5/">LinkedIn</a></dd>
               <dd><a href="https://github.com/fla-pi/">GitHub</a></dd>
