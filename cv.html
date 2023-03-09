@@ -4,7 +4,6 @@
     Released under the Simplified BSD License/FreeBSD (2-clause) License.
     https://github.com/mavroudisv/plain-academic
 -->
-
 <html lang="en">
 <head>
   <title>Flavio Pisciotta</title>
@@ -14,6 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="print.css" media="print">
   <style> @media screen and (max-width: 768px) {
     #sidebar { 
    display: none;
@@ -28,7 +28,19 @@
     #sidebarphone { 
    display: none;
     }
-   }</style>
+  }
+    @media print {
+      #sidebar, #sidebarlinks, #btn {
+    position: absolute;
+    display: none !important;
+  }
+} 
+  @media print {a[href]:after {
+    content: none !important;
+  
+}
+  } 
+   </style>
 </head>
 <body>
 
@@ -58,7 +70,7 @@
 	  </div>
 	</nav>
   <!-- Contact Info on the Sidebar -->        
-  <div id= "sidebarphone" class="col-md-4">
+  <div id= "sidebarphone" class="col-md-4 printme">
     
     <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Flavio Pisciotta</b></div>
     <p><b>PhD candidate in Linguistics</b><br>
@@ -67,8 +79,9 @@
     Fisciano (SA), Italy
     </p>
 </div>
+
   <!-- Page Content -->
-    <div class="container">
+    <div  class="container">
 
         <div class="row">
 
@@ -77,8 +90,10 @@
                 
                 <!-- Main Image -->
                 <img class="img-responsive" src="photo.gif" alt=""><br>
-                
-                <div class="col-md-15" style="height: 100vh; line-height:1em">    
+                <button type="button" onclick={window.print()} style = "float:right" id = "btn">
+                  Print PDF
+                </button>
+                <div id='printpdf' class="col-md-15 printme" style="height: 100vh; line-height:1em">    
                   <h2 id="publications">Curriculum vitae</h2>
                   <br>
                   <strong style=font-size:16px>Education</strong>
@@ -181,6 +196,11 @@
                   </div>
                 
             </div> 
+            
+
+         
+            
+            
 
             <!-- Contact Info on the Sidebar -->
             <div id= "sidebar" class="col-md-4">
@@ -193,7 +213,7 @@
               via Giovanni Paolo II 132, 84084<br>
               Fisciano (SA), Italy
               </p>
-          </div>
+            </div>
           
           
           <!-- Links on the Sidebar -->
@@ -206,6 +226,8 @@
 
     </div>
     <!-- /.container -->
+
+   
     
     
 </body>
