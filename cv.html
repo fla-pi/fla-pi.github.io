@@ -30,9 +30,15 @@
     }
   }
     @media print {
-      #sidebar, #sidebarlinks, #btn {
+      #sidebar, #sidebarlinks, #btn, #sidebarphone, #noprint, #noprint2 {
     position: absolute;
     display: none !important;
+  }
+} 
+@media print {
+      #print {
+    position: relative;
+    display: unset !important;
   }
 } 
   @media print {a[href]:after {
@@ -91,11 +97,21 @@
                 <!-- Main Image -->
                 <img class="img-responsive" src="photo.gif" alt=""><br>
                 <button type="button" onclick={window.print()} style = "float:right" id = "btn">
-                  Print / Print as PDF
+                  Print / Print to PDF
                 </button>
                 <div id='printpdf' class="col-md-15 printme" style="height: 100vh; line-height:1em">    
                   <h2 id="publications">Curriculum vitae</h2>
                   <br>
+                  <div class="col-md-4" id="print" style="display:none">
+                    <p><b style="font-size:20px">Flavio Pisciotta</b></p>
+                    <p syle="text-indent: 1.5em;">   E-mail: fpisciotta@unisa.it<br>
+                          GitHub: https://github.com/fla-pi<br>
+                          University of Salerno<br>
+                          via Giovanni Paolo II 132,<br>
+                          84084 Fisciano (SA), Italy</p>
+                    
+                    <br>
+                  </div>
                   <strong style=font-size:16px>Education</strong>
                   <hr style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
@@ -156,42 +172,91 @@
                   <p font-size='3px'>  </p>
                   <ul>
                   <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Teaching tutor</strong> - University of Bologna<br/>
-                  <i style=font-size:11.5px>November 2022 - Ongoing</i><br/>
-                  <span style=font-size:12px>PhD Program "Literary, Linguistic and Historical Studies", curriculum Linguistic Studies.</br>
-                    Provisional title of the project: "Horizontal links in the Constructicon: alternations and paradigmatic relationships between morphology and syntax". Supervisor: prof. Claudio Iacobini. Co-supervisor: prof. Francesca Masini (University of Bologna).
+                  <i style=font-size:11.5px>April 2022 - October 2022</i><br/>
+                  <span style=font-size:12px>Teaching tutor of the course “Theory of Lexicon”, a.y. 2021/2022 (MA in Italian Culture and Language for Foreigners). Supervisor: prof. Francesca Masini.<br>
+                    Activities carried out in the <a href="https://site.unibo.it/laboratorio-sperimentale/en">Experimental Lab</a> of the Department of Modern Languages, Literatures and Cultures (LILEC): assistance to the laboratory users (students carrying out their thesis research and professors), assistance in organizing and performing psycholinguistic experiments.
                   </span></li>
                   <p font-size='3px'>  </p>
                   <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Part-time collaboration</strong> - University of Bologna<br/>
-                  <i style=font-size:11.5px>September 2019 - March 2022</i><br/>
-                  <span style=font-size:12px>MA Programme "Italian Studies, European Literary Cultures, Linguistics", curriculum Linguistics.</br> 
-                    Final Grade: 110/110 cum Laude.<br/>
-                  Dissertation in Semantics and Lexicon, titled: “Le costruzioni impersonali e a sollevamento con <i>sembrare</i> in italiano scritto e parlato: uno studio costruzionista e <i>usage-based</i>" (“Impersonal and raising constructions with <i>sembrare</i> in written and spoken Italian: a constructionist and usage-based study”). Supervisor: prof. Francesca Masini. Co-supervisor: prof. Chiara Gianollo.</span></li>
+                  <i style=font-size:11.5px>October 2021 - November 2021</i><br/>
+                  <span style=font-size:12px>Part-time collaboration (total length: 150 hours) at “Giovanni Battista Ercolani” library of Department of Veterinary Medical Sciences (University of Bologna), in Ozzano dell’Emilia (BO). <br>
+                    Tasks performed: reference desk; loan services; library inventory.</span></li>
                   <p font-size='3px'>  </p>
                   <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Curricular internship</strong> - University of Bologna<br/>
-                  <i style=font-size:11.5px>September 2014 - February 2019</i><br/>
-                  <span style=font-size:12px>BA in Philosophy. Extracurricular courses: General linguistics (BA in Modern Literature); Glottology and Linguistics (BA in Classics).</br>
-                    Final Grade: 110/110 cum Laude.</br>
-                    Dissertation in Theoretical Philosophy, titled: "Il tatto alla base della condizione umana: un dialogo tra Leroi-Gourhan e l’antropologia filosofica" ("Touch at the basis of the human condition: a dialogue between Leroi-Gourhan and philosophical anthropology"). Supervisor: prof. Nicola Russo.
-                     </span></li>
+                  <i style=font-size:11.5px>December 2020 - June 2021</i><br/>
+                  <span style=font-size:12px>Update of the synchronic corpus of written Italian CORIS (<a href="https://corpora.ficlit.unibo.it/TCORIS/">Reference Corpus of Written Italian</a>). Supervisor: prof. Fabio Tamburini.<br>
+                  Tasks performed: subcorpus design; selection and cleaning of textual resources; creation of scripts for website scraping and for text files tokenization.
+                  </span></li>
                   <p font-size='3px'>  </p> </ul>
                   <br>
                   <strong style=font-size:16px>Research projects</strong>
                   <hr style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                   <ul>
-                  <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Adopt a Construction - Towards an Italian Constructicon</strong><br/>
-                  <i style=font-size:11.5px>November 2022 - Ongoing</i><br/>
-                  <span style=font-size:12px>PhD Program "Literary, Linguistic and Historical Studies", curriculum Linguistic Studies.</br>
-                    Provisional title of the project: "Horizontal links in the Constructicon: alternations and paradigmatic relationships between morphology and syntax". Supervisor: prof. Claudio Iacobini. Co-supervisor: prof. Francesca Masini (University of Bologna).
+                  <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Adopt a Construction</strong>- Towards an Italian Constructicon<br/>
+                  <i style=font-size:11.5px>April 2022 - Ongoing</i><br/>
+                  <span style=font-size:12px>Project board member (with L. Busso e M. S. Micheli) for the project Adopt a Construction, at the Department of Modern Languages, Literatures and Cultures (LILEC) of the University of Bologna.<br>
+                     The project, under the scientific direction of professor Francesca Masini, aims at the creation of the first Italian Constructicon as a collaborative resource.
                   </span></li>
                   <p font-size='3px'>  </p>
-                  <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>DILLo - Database Italiano del Lessico per Logopedisti</strong><br/>
-                  <i style=font-size:11.5px>September 2019 - March 2022</i><br/>
-                  <span style=font-size:12px>MA Programme "Italian Studies, European Literary Cultures, Linguistics", curriculum Linguistics.</br> 
-                    Final Grade: 110/110 cum Laude.<br/>
-                  Dissertation in Semantics and Lexicon, titled: “Le costruzioni impersonali e a sollevamento con <i>sembrare</i> in italiano scritto e parlato: uno studio costruzionista e <i>usage-based</i>" (“Impersonal and raising constructions with <i>sembrare</i> in written and spoken Italian: a constructionist and usage-based study”). Supervisor: prof. Francesca Masini. Co-supervisor: prof. Chiara Gianollo.</span></li>
-                  
+                  <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>DILLo</strong>- Database Italiano del Lessico per Logopedisti<br/>
+                  <i style=font-size:11.5px>June 2021 - Ongoing</i><br/>
+                  <span style=font-size:12px>Collaborator in the realization of <a href="https://dillodatabase.altervista.org/">DILLo</a>, an online lexical database for speech therapists.<br>
+                    Tasks: Selection of diatopic variants of the lexemes, phonetic and phonemic transcription, revision of the database.</span></li>
                   <p font-size='3px'>  </p> </ul>
+                  <br>
+                  <strong style=font-size:16px>Languages</strong>
+                  <hr style="border-color:black;margin: 0.2em">
+                  <p font-size='3px'>  </p>
+                  <ul>
+                  <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Adopt a Construction - Towards an Italian Constructicon</strong><br/>
+          
+                 <span style=font-size:12px>Project board member (with L. Busso e M. S. Micheli) for the project Adopt a Construction, at the Department of Modern Languages, Literatures and Cultures (LILEC) of the University of Bologna.<br>
+                     The project, under the scientific direction of professor Francesca Masini, aims at the creation of the first Italian Constructicon as a collaborative resource.
+                  </span></li>
+                  <p font-size='3px'>  </p>
+                  </p> </ul>
+                  <br>
+                  <strong style=font-size:16px>Technical skills</strong>
+                  <hr style="border-color:black;margin: 0.2em">
+                  <p font-size='3px'>  </p>
+                  <ul>
+                  <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Adopt a Construction - Towards an Italian Constructicon</strong><br/>
+          
+                 <span style=font-size:12px>Project board member (with L. Busso e M. S. Micheli) for the project Adopt a Construction, at the Department of Modern Languages, Literatures and Cultures (LILEC) of the University of Bologna.<br>
+                     The project, under the scientific direction of professor Francesca Masini, aims at the creation of the first Italian Constructicon as a collaborative resource.
+                  </span></li>
+                  <p font-size='3px'>  </p>
+                  </p> </ul>
+                  <br>
+                  <strong style=font-size:16px>Awards and grants</strong>
+                  <hr style="border-color:black;margin: 0.2em">
+                  <p font-size='3px'>  </p>
+                  <ul>
+                  <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Adopt a Construction</strong>- Towards an Italian Constructicon<br/>
+                  <i style=font-size:11.5px>April 2022 - Ongoing</i><br/>
+                  <span style=font-size:12px>Project board member (with L. Busso e M. S. Micheli) for the project Adopt a Construction, at the Department of Modern Languages, Literatures and Cultures (LILEC) of the University of Bologna.<br>
+                     The project, under the scientific direction of professor Francesca Masini, aims at the creation of the first Italian Constructicon as a collaborative resource.
+                  </span></li>
+                  <p font-size='3px'>  </p>
+                  </p> </ul>
+                  <br>
+                  <strong style=font-size:16px>Academic Memberships</strong>
+                  <hr style="border-color:black;margin: 0.2em">
+                  <p font-size='3px'>  </p>
+                  <ul>
+                  <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Adopt a Construction</strong>- Towards an Italian Constructicon<br/>
+                  <i style=font-size:11.5px>April 2022 - Ongoing</i><br/>
+                  <span style=font-size:12px>Project board member (with L. Busso e M. S. Micheli) for the project Adopt a Construction, at the Department of Modern Languages, Literatures and Cultures (LILEC) of the University of Bologna.<br>
+                     The project, under the scientific direction of professor Francesca Masini, aims at the creation of the first Italian Constructicon as a collaborative resource.
+                  </span></li>
+                  <p font-size='3px'>  </p>
+                  </p> </ul>
+                  <br>
+                  <br>
+                  <p id="noprint"><a href="publications.html"><strong style="font-size:16px">List of publications</strong></a></p>
+                  
+                  <p id="noprint2"><a href="conference_talks.html"><strong style="font-size:16px">List of conference talks</strong></a></p>
                   <br>
                   </div>
                 
