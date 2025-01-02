@@ -28,7 +28,39 @@
     #sidebarphone { 
    display: none;
     }
-   }</style>
+   }
+   body {
+            
+            background-color: white;
+            color: black;
+            
+        }
+ 
+        .dark-mode {
+            background-color: #201f1f ;
+            color: rgb(246, 236, 236);
+        }
+
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+    button {
+            
+      background-color: #201f1f ;
+      color: rgb(246, 236, 236);
+                
+            } 
+          .light-btn-mode {
+            background-color: white;
+            color: black;
+        }
+        
+        .dark-link {
+        color: #58a6ff;
+          }
+   
+   </style>
 </head>
 <body>
 
@@ -85,7 +117,18 @@
                 
                 <!-- Main Image -->
                 <img class="img-responsive" src="photo.gif" alt=""><br>
-                
+                <button class="button" id="btn" onclick="darkMode()"  style = "float:right">Darkmode/Lightmode</button>
+                <script>
+                  function darkMode() {
+                      var element = document.body;
+                      element.classList.toggle("dark-mode");
+                      var but = document.getElementById("btn");
+                      but.classList.toggle("light-btn-mode");
+                      var lnk = document.getElementsByTagName("a");
+                      lnk.classList.toggle("dark-link");
+                  }
+              </script>
+              <br>
                 <div style="margin-top:3%; text-align:justify;">                
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					

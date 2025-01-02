@@ -30,7 +30,7 @@
     }
   }
     @media print {
-      #sidebar, #sidebarlinks, #btn, #sidebarphone, #noprint, #noprint2 {
+      #sidebar, #sidebarlinks, #btn, #btn2, #sidebarphone, #noprint, #noprint2 {
     position: absolute;
     display: none !important;
   }
@@ -46,6 +46,37 @@
   
 }
   } 
+
+  body {
+            
+            background-color: white;
+            color: black;
+            
+        }
+ 
+        .dark-mode {
+            background-color: #201f1f ;
+            color: rgb(246, 236, 236);
+        }
+
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+    button {
+            
+      background-color: #201f1f ;
+      color: rgb(246, 236, 236);
+                
+            } 
+          .light-btn-mode {
+            background-color: white;
+            color: black;
+        }
+        
+        .dark-link {
+        color: #58a6ff;
+          }
    </style>
 </head>
 <body>
@@ -96,9 +127,26 @@
                 
                 <!-- Main Image -->
                 <img class="img-responsive" src="photo.gif" alt=""><br>
-                <button type="button" onclick={window.print()} style = "float:right" id = "btn">
+                <button class="button" id="btn" onclick="darkMode()"  style = "float:right">Darkmode/Lightmode</button>
+                <script>
+                  function darkMode() {
+                      var element = document.body;
+                      element.classList.toggle("dark-mode");
+                      var but = document.getElementById("btn");
+                      but.classList.toggle("light-btn-mode");
+                      var but = document.getElementById("btn2");
+                      but.classList.toggle("light-btn-mode");
+                      var lnk = document.getElementsByTagName("a");
+                      lnk.classList.toggle("dark-link");
+                  }
+                  </script>
+                <br>
+          
+                <br>
+                <button type="button" onclick={window.print()} style = "float:right" id = "btn2">
                   Print / Print to PDF
                 </button>
+
                 <div id='printpdf' class="col-md-15 printme" style="height: 100vh; line-height:1em">    
                   <h2 id="publications">Curriculum vitae</h2>
                   <br>
