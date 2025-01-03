@@ -110,13 +110,18 @@
                 
                 <!-- Main Image -->
                 <img class="img-responsive" src="photo.gif" alt=""><br>
-                <button class="button" id="btn" onclick="darkMode()"  style = "float:right">Darkmode/Lightmode</button>
+                <button class="button" id="btn" onclick="darkMode()"  style = "float:right">Dark mode</button>
                 <script>
                   function darkMode() {
                       var element = document.body;
                       element.classList.toggle("dark-mode");
                       var but = document.getElementById("btn");
                       but.classList.toggle("light-btn-mode");
+                      if (but.innerText === "Dark mode") {
+                        but.innerText = 'Light mode';
+                          } else {
+                          but.innerText = "Dark mode";
+                          }
                       var lnk = document.getElementsByTagName("a");
                       lnk.classList.toggle("dark-link");
                   }

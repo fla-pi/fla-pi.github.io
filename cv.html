@@ -63,7 +63,7 @@
             background-color: white;
             color: black;
         }
-    button {
+    .button {
             
       background-color: #201f1f ;
       color: rgb(246, 236, 236);
@@ -71,6 +71,10 @@
             } 
           .light-btn-mode {
             background-color: white;
+            color: black;
+        }
+
+          .light-btn-text-mode {
             color: black;
         }
         
@@ -127,15 +131,20 @@
                 
                 <!-- Main Image -->
                 <img class="img-responsive" src="photo.gif" alt=""><br>
-                <button class="button" id="btn" onclick="darkMode()"  style = "float:right">Darkmode/Lightmode</button>
+                <button class="button" id="btn" onclick="darkMode()"  style = "float:right">Dark mode</button>
                 <script>
                   function darkMode() {
                       var element = document.body;
                       element.classList.toggle("dark-mode");
                       var but = document.getElementById("btn");
                       but.classList.toggle("light-btn-mode");
-                      var but = document.getElementById("btn2");
-                      but.classList.toggle("light-btn-mode");
+                      if (but.innerText === "Dark mode") {
+                        but.innerText = 'Light mode';
+                          } else {
+                          but.innerText = "Dark mode";
+                          }
+                      var butn = document.getElementById("btn2");
+                      butn.classList.toggle("light-btn-text-mode");
                       var lnk = document.getElementsByTagName("a");
                       lnk.classList.toggle("dark-link");
                   }
@@ -143,7 +152,7 @@
                 <br>
           
                 <br>
-                <button type="button" onclick={window.print()} style = "float:right" id = "btn2">
+                <button type=".button" onclick={window.print()} style = "float:right" id = "btn2">
                   Print / Print to PDF
                 </button>
 
