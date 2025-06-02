@@ -81,6 +81,10 @@
         .dark-link {
         color: #58a6ff;
           }
+          
+          .dark-hr {
+            border-color: rgb(246, 236, 236);
+          }
    </style>
 </head>
 <body>
@@ -142,11 +146,16 @@
                         but.innerText = 'Light mode';
                           } else {
                           but.innerText = "Dark mode";
-                          }
+                          };
                       var butn = document.getElementById("btn2");
                       butn.classList.toggle("light-btn-text-mode");
                       var lnk = document.getElementsByTagName("a");
                       lnk.classList.toggle("dark-link");
+                      var line = document.getElementsByClassName("hr");
+                      for (let i = 0; i < line.length; ++i) {
+                        line[i].classList.toggle("dark-hr");
+                        }
+                    
                   }
                   </script>
                 <br>
@@ -170,7 +179,7 @@
                     <br>
                   </div>
                   <strong style=font-size:16px>Education</strong>
-                  <hr style="border-color:black;margin: 0.2em">
+                  <hr class = "hr" style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                   <ul>
                   <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>PhD candidate in Linguistic Studies</strong> - University of Salerno<br/>
@@ -195,7 +204,7 @@
                   <br>
                   
                     <strong style=font-size:16px>Professional experience</strong>
-                  <hr style="border-color:black;margin: 0.2em">
+                  <hr class = "hr" style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                   <ul>
                   <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Tutoring activity "Linguistic Education"</strong> - University of Salerno<br/>
@@ -235,7 +244,7 @@
                   <p font-size='3px'>  </p> </ul>
                   <br>
                   <strong style=font-size:16px>Winter/Summer schools and PhD courses</strong>
-                  <hr style="border-color:black;margin: 0.2em">
+                  <hr class = "hr" style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                   <ul>
                   <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>LOT Summer School 2024</strong> - Leiden University<br/>
@@ -271,7 +280,7 @@
                   <p font-size='3px'>  </p> </ul>
                   <br>
                   <strong style=font-size:16px>Research projects</strong>
-                  <hr style="border-color:black;margin: 0.2em">
+                  <hr class = "hr" style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                   <ul>
                   <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Adopt a Construction</strong> - Towards an Italian Constructicon<br/>
@@ -287,7 +296,7 @@
                   <p font-size='3px'>  </p> </ul>
                   <br>
                   <strong style=font-size:16px>Conference organization</strong>
-                  <hr style="border-color:black;margin: 0.2em">
+                  <hr class = "hr" style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                   <ul>
                   <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>Unlocking evaluative morphology: Conceptual and methodological challenges</strong><br/>
@@ -304,14 +313,14 @@
                   <p font-size='3px'>  </p> </ul>
                   <br>
                   <strong style=font-size:16px>Reviewing activities</strong>
-                  <hr style="border-color:black;margin: 0.2em">
+                  <hr class = "hr" style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                   <ul>
                   <li style=font-size:12px;margin:0.2em;list-style-type:circle>Occasional reviewer for the journal <i>Constructions and Frames</i> (ISSN: 1876-1933) </li>
                   <br>
                   <p font-size='3px'>  </p> </ul>
                   <strong style=font-size:16px>Languages</strong>
-                  <hr style="border-color:black;margin: 0.2em">
+                  <hr class = "hr" style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                   <ul style ="list-style-type:circle;">
                   <li style=font-size:14px;><strong>Italian</strong> - Native Speaker</li>
@@ -321,7 +330,7 @@
                   </p> </ul>
                   <br>
                   <strong style=font-size:16px>Technical skills</strong>
-                  <hr style="border-color:black;margin: 0.2em">
+                  <hr class = "hr" style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                   <ul style ="list-style-type:circle;">
                     <li style=font-size:14px;><strong>Italian</strong> - Native Speaker</li>
@@ -331,7 +340,7 @@
                     </p> </ul>
                   <br>
                   <strong style=font-size:16px>Awards and grants</strong>
-                  <hr style="border-color:black;margin: 0.2em">
+                  <hr class = "hr" style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                   <ul>
                   <li style=font-size:14px;margin:0.2em;list-style-type:square><strong>CLUB Award 2022</strong> - University of Bologna<br/>
@@ -343,7 +352,7 @@
                   </p> </ul>
                   <br>
                   <strong style=font-size:16px>Academic Memberships (current and past)</strong>
-                  <hr style="border-color:black;margin: 0.2em">
+                  <hr class = "hr" style="border-color:black;margin: 0.2em">
                   <p font-size='3px'>  </p>
                    <ul style="font-size:12px">Current: <i>International Pragmatics Association</i> (IPrA)  [years 2022,2023], <i>Società di Linguistica Italiana</i> (SLI)  [year 2023]</br>
                    Past: <i>Associazione Italiana di Linguistica Computazionale</i> (AILC) [year 2022]
@@ -364,7 +373,7 @@
                     <p font-size='3px'>  </p> </ul>
                           <br>
                         <strong style=font-size:16px>Publications</strong>
-                        <hr style="border-color:black;margin: 0.2em">
+                        <hr class = "hr" style="border-color:black;margin: 0.2em">
                         <p font-size='3px'>  </p>
                         
                           <p style=font-size:14px;margin:0.2em><strong>Journal articles<br/></strong>
@@ -383,7 +392,7 @@
                             <p font-size='3px'>  </p> </ul>
                             <br>
                               <strong style=font-size:16px>Conference presentations</strong>
-                              <hr style="border-color:black;margin: 0.2em">
+                              <hr class = "hr" style="border-color:black;margin: 0.2em">
                               <p font-size='3px'>  </p>
                               
                                 <p style=font-size:14px;margin:0.2em><strong>Oral presentations<br/></strong>
